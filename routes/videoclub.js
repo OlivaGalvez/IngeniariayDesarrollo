@@ -118,7 +118,7 @@ router.delete('/pelicula/:id', function (req, res) {
             } else {
                 res.status(200);
                 res.json({
-                    mensaje : "Borrado",
+                    eliminado : true,
                 });
             }
             client.close();
@@ -245,7 +245,7 @@ router.delete('/disco/:id', function (req, res) {
             } else {
                 res.status(200);
                 res.json({
-                    mensaje : "Borrado",
+                    eliminado : true,
                 });
             }
             client.close();
