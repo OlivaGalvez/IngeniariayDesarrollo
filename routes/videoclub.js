@@ -4,7 +4,7 @@ var router = express.Router();
 
 // Cliente de Mongo
 var MongoClient = require('mongodb').MongoClient;
-var ruta = 'mongodb://localhost:27017';
+var ruta = 'mongodb+srv://luisolivaabel:LuisOlivaAbel2021@cluster0.jrtwl.mongodb.net/videoclub?retryWrites=true&w=majority';
 
 //Entidad Pelicula
 function Pelicula (titulo, descripcion, anio, director) {
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
 });
 
 //Obtener todas las peliculas
-router.get('/peliculas', function (req, res) {
+router.get('/pelicula', function (req, res) {
 
     // Abrir el cliente
     MongoClient.connect(ruta,function(err, client) {
@@ -157,7 +157,7 @@ router.put('/pelicula/:id', function (req, res) {
 })
 
 //Obtener todos los discos
-router.get('/discos', function (req, res) {
+router.get('/disco', function (req, res) {
 
     // Abrir el cliente
     MongoClient.connect(ruta,function(err, client) {
